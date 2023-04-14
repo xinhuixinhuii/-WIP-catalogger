@@ -16,6 +16,6 @@ https://nodejs.org/en/download
 
 `cd catalogger`
 
-`npx expo start --tunnel`
+`yarn start --tunnel`
 
 open app in Expo Go
