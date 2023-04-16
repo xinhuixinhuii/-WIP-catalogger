@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'BE.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'catalogger_db',
+        'USERNAME': 'root',
+        'PASSWORD': 'reddevil3de',
+        'HOST': '127.0.0.1',  # If localhost
+        'PORT': '3306',  # your database running port
     }
 }
 
