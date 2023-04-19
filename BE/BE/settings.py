@@ -23,14 +23,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-r4$b9%6(*9r0o-k!e!2dp5icogv&*qvs$g#klv5v1pld8og$v8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["root"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'profiles.apps.ProfilesConfig',
+    'catlist.apps.CatListConfig',
+    'catlog.apps.CatLogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
