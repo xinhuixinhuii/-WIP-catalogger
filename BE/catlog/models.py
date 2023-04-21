@@ -9,10 +9,8 @@ class Photo(models.Model):
     class Meta: 
         abstract = True
 
-class CatLog(CatList):
-    #catName = models.ForeignKey(CatList, max_length=16, on_delete = models.CASCADE)
+class CatLog(CatList, Photo):
+    catLogName = models.ForeignKey(CatList, to_field = 'catListName', on_delete = models.CASCADE, parent_link = True, related_name = 'catlog_ptr', default = "Unknown")
     location = models.JSONField(max_length = 128)
     dateTime = models.DateTimeField()
      
-    def new_post(self):
-        return self.new_post()

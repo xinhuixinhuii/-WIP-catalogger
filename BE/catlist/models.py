@@ -8,7 +8,4 @@ class Photo(models.Model):
         abstract = True
     
 class CatList(Photo):
-    name = models.CharField(max_length = 16)
-    
-    def __str__(self) -> str:
-        return self.name
+    catListName = models.CharField(max_length = 16, unique = True, default = "Unknown")
