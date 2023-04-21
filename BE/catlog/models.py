@@ -14,3 +14,5 @@ class CatLog(CatList):
     location = models.JSONField(max_length = 128)
     dateTime = models.DateTimeField()
      
+    def new_post(self):
+        return self.new_post()
