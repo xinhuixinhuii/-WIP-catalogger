@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'profiles.apps.ProfilesConfig',
     'catlist.apps.CatListConfig',
     'catlog.apps.CatLogConfig',
+    'django_cleanup.apps.CleanupConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,13 +78,13 @@ WSGI_APPLICATION = 'BE.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'catalogger_db',
-        'USERNAME': 'root',
-        'PASSWORD': 'reddevil3de',
-        'HOST': '127.0.0.1',  # If localhost
-        'PORT': '3306',  # your database running port
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "kanghao",
+        "USER": "",
+        "PASSWORD": "",
+        "HOST": "localhost",
+        "PORT": "",
     }
 }
 
