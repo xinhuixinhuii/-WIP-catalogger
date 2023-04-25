@@ -13,7 +13,3 @@ def result(request, catLogName, dateTime):
     log = "This catLogName %s is reported at."
     return HttpResponse(log % dateTime)
 
-'''def index(request):
-    logsInOneDay = CatLog.objects.order_by("dateTime")[:5]
-    output = 
-'''   
