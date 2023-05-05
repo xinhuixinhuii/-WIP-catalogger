@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'profiles.apps.ProfilesConfig',
     'catlist.apps.CatListConfig',
     'catlog.apps.CatLogConfig',
-    'django_cleanup.apps.CleanupConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

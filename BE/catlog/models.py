@@ -1,6 +1,6 @@
 from django.db import models
 from catlist.models import CatList
-from django_cleanup import cleanup
+from datetime import datetime, timedelta
 
 # Create your models here.
 class Photo(models.Model):
@@ -12,9 +12,11 @@ class Photo(models.Model):
 class CatLog(CatList, Photo):
     catLogName = models.ForeignKey(CatList, to_field= 'catListName', on_delete= models.CASCADE, parent_link= True, related_name= 'catlog_ptr', default = "Unknown")
     location = models.JSONField(max_length= 128)
-    createdAt = models.DateTimeField(auto_now_add= True, blank=True)
-    
-    
-    @cleanup("createdAt", clean_empty= False)
+    createdAt = models.DateTimeField(blank=True, default=datetime.now)
+
     def cleanUpLogs(self):
-        pass
+        if (datetime.now()-self.createdAt) >= timedelta(hours=24):
+            self.delete()
+        
+
+   
