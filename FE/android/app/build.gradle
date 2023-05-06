@@ -113,7 +113,7 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.catalogger"
+    namespace 'com.xhxhxh.catalogger'
     defaultConfig {
         applicationId 'com.xhxhxh.catalogger'
         minSdkVersion rootProject.ext.minSdkVersion

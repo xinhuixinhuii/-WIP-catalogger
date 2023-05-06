@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import {SafeAreaView, StyleSheet, View, Alert, Text} from 'react-native';
+// import MapView, {Marker} from 'react-native-maps';
 
 const HomeScreen = () => {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>
-    );
+  return (
+    <Text>Home</Text>
+  );
 }
 
 export default HomeScreen;
